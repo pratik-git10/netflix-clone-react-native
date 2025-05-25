@@ -22,7 +22,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-neutral-400 shadow-md shadow-black border-black max-w-sm md:max-w-4xl mx-auto sticky top-0 m-2 backdrop-blur-3xl rounded-md flex-1 flex-nowrap">
+    <div className="bg-neutral-400 shadow-md shadow-black border-black sticky top-0 m-2 backdrop-blur-3xl rounded-md flex-1 flex-nowrap">
       <div className="flex px-6 py-3 mb-2 justify-between items-center mx-2">
         <div>
           <Link className="font-bold text-2xl text-orange-800" to={"/"}>
