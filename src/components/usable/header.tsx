@@ -51,7 +51,9 @@ const Header = () => {
               <UserButton />
             </SignedIn>
             <SignedOut>
-              <Button>Login</Button>
+              <NavLink to={"/sign-in"}>
+                <Button>Login</Button>
+              </NavLink>
             </SignedOut>
           </div>
           <div
