@@ -1,8 +1,12 @@
-import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Button } from "../ui/button";
 
 const Header = () => {
   const navLinks = [
@@ -47,14 +51,12 @@ const Header = () => {
 
         <div className="ml-4 flex items-center justify-center text-center gap-4">
           <div className="">
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
             <SignedIn>
               <UserButton />
             </SignedIn>
-            <SignedOut>
-              <NavLink to={"/sign-in"}>
-                <Button>Login</Button>
-              </NavLink>
-            </SignedOut>
           </div>
           <div
             className="md:hidden cursor-pointer"
