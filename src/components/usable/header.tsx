@@ -7,6 +7,7 @@ import {
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Button } from "../ui/button";
 
 const Header = () => {
   const navLinks = [
@@ -52,7 +53,11 @@ const Header = () => {
         <div className="ml-4 flex items-center justify-center text-center gap-4">
           <div className="">
             <SignedOut>
-              <SignInButton />
+              <div className="cursor-pointer">
+                <Button className="">
+                  <SignInButton />
+                </Button>
+              </div>
             </SignedOut>
             <SignedIn>
               <UserButton />
