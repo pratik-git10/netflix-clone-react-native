@@ -3,6 +3,8 @@ import Home from "./pages/Home";
 import About from "./pages/about";
 import Header from "./components/usable/header";
 import Blog from "./pages/blog";
+import Terms from "./pages/terms";
+import Privacy from "./pages/privacy";
 // import { Home } from "@/pages/Home.";
 
 const App = () => {
@@ -14,6 +16,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </Router>
     </div>

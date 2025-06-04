@@ -7,7 +7,6 @@ import {
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Button } from "../ui/button";
 
 const Header = () => {
   const navLinks = [
@@ -56,9 +55,7 @@ const Header = () => {
           <div className="">
             <SignedOut>
               <div className="cursor-pointer">
-                <Button className="">
-                  <SignInButton />
-                </Button>
+                <SignInButton />
               </div>
             </SignedOut>
             <SignedIn>
@@ -82,7 +79,7 @@ const Header = () => {
               onClick={() => setIsOpen(false)} // close on click
               className={({ isActive }) =>
                 `py-2 px-3 rounded-md transition-all ${
-                  isActive ? "bg-rose-700 text-white" : "hover:bg-rose-700"
+                  isActive ? "bg-amber-700 text-white" : "hover:bg-amber-700"
                 }`
               }>
               {link.name}
