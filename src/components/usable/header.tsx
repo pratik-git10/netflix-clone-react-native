@@ -27,10 +27,10 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-neutral-400 shadow-md max-w-5xl mx-auto shadow-black border-black sticky top-0 m-2 backdrop-blur-3xl rounded-md flex-1 flex-nowrap">
+    <div className="border border-neutral-300 border-t-0 shadow-sm max-w-5xl mx-4 xl:mx-auto shadow-white sticky top-0 backdrop-blur-xs rounded-md flex-1 flex-nowrap mt-3">
       <div className="flex px-6 py-3 mb-2 justify-between items-center mx-2">
         <div>
-          <Link className="font-bold text-2xl text-orange-800" to={"/"}>
+          <Link className="font-bold text-2xl text-rose-3 00" to={"/"}>
             ChatApp
           </Link>
         </div>
@@ -40,8 +40,10 @@ const Header = () => {
               <NavLink
                 to={link.link}
                 className={({ isActive }) =>
-                  `py-1 px-2 rounded-md transition-all ${
-                    isActive ? "bg-rose-700 text-white" : "hover:bg-rose-700"
+                  `py-1 px-2 rounded-md transition-all font-bold ${
+                    isActive
+                      ? "bg-amber-300 text-black"
+                      : "hover:bg-amber-400 hover:text-black"
                   }`
                 }>
                 {link.name}
