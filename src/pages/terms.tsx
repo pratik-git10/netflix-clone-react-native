@@ -1,4 +1,4 @@
-import Loader from "@/components/loader";
+import Loader from "@/components/usable/loader";
 import { ArrowLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -34,7 +34,7 @@ const Terms = () => {
     <div className="">
       <NavLink
         to={"/"}
-        className="flex gap-2 items-center hover:bg-neutral-800 px-2 py-1 rounded-md w-fit m-10 transition transform ease-in-out duration-200 mt-20">
+        className="flex gap-2 items-center hover:bg-neutral-800 px-2 py-1 rounded-md w-fit m-2 md:m-10 transition transform ease-in-out duration-200 mt-4 md:mt-20">
         <ArrowLeft />
         <h1>Back</h1>
       </NavLink>

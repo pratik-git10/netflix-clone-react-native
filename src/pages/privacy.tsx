@@ -1,4 +1,4 @@
-import Loader from "@/components/loader";
+import Loader from "@/components/usable/loader";
 import { ArrowLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -39,7 +39,7 @@ const Terms = () => {
         <h1>Back</h1>
       </NavLink>
       {loading ? (
-        <div className="absolute top-2 right-1 text-sm text-muted-foreground px-3 py-1 rounded shadow">
+        <div className="absolute top-5 right-4 text-sm text-muted-foreground px-3 py-1 rounded shadow">
           <Loader />
         </div>
       ) : (
