@@ -1,4 +1,5 @@
-import { ArrowLeft, Circle } from "lucide-react";
+import Loader from "@/components/loader";
+import { ArrowLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -25,7 +26,7 @@ const Terms = () => {
 
   // Simulate loading
   useEffect(() => {
-    const timeout = setTimeout(() => setLoading(true), 1500);
+    const timeout = setTimeout(() => setLoading(false), 800);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -33,28 +34,31 @@ const Terms = () => {
     <div className="">
       <NavLink
         to={"/"}
-        className="flex gap-2 items-center hover:bg-neutral-800 px-2 py-1 rounded-md w-fit m-6 transition transform ease-in-out duration-200">
+        className="flex gap-2 items-center hover:bg-neutral-800 px-2 py-1 rounded-md w-fit m-10 transition transform ease-in-out duration-200 mt-20">
         <ArrowLeft />
         <h1>Back</h1>
       </NavLink>
-
-      <div className="max-w-4xl mx-auto p-4">
-        <h1 className="text-center text-4xl font-bold m-4">Terms of Service</h1>
-        {loading ? (
-          <div className="text-center flex justify-center my-20 items-center text-lg text-muted-foreground">
-            <Circle className="animate-spin text-gray-300" />
+      {loading ? (
+        <div className="absolute top-5 right-4 text-sm text-muted-foreground px-3 py-1 rounded shadow">
+          <Loader />
+        </div>
+      ) : (
+        <div className="relative max-w-4xl mx-auto p-4">
+          <div className="mb-20">
+            <h1 className="text-center text-4xl font-bold m-4">
+              Terms of Service
+            </h1>
           </div>
-        ) : (
-          paras.map((para, idx) => (
+          {paras.map((para, idx) => (
             <div key={idx} className="flex flex-col gap-3">
               <h1 className="text-3xl font-bold">{para.heading}</h1>
               <p className="text-base text-muted-foreground mb-8">
                 {para.paragraph}
               </p>
             </div>
-          ))
-        )}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

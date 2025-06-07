@@ -8,14 +8,14 @@ import Privacy from "./pages/privacy";
 
 const App = () => {
   return (
-    <div>
+    <div className="">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/privacy-policy" element={<Privacy />} />
         </Routes>
       </Router>
     </div>
