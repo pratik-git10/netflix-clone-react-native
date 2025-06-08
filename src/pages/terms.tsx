@@ -22,6 +22,16 @@ const Terms = () => {
       paragraph:
         "Users must use the platform responsibly and in compliance with applicable laws. Prohibited behavior includes unauthorized access, data scraping, and posting harmful content.",
     },
+    {
+      heading: "User Conduct",
+      paragraph:
+        "Users must use the platform responsibly and in compliance with applicable laws. Prohibited behavior includes unauthorized access, data scraping, and posting harmful content.",
+    },
+    {
+      heading: "User Conduct",
+      paragraph:
+        "Users must use the platform responsibly and in compliance with applicable laws. Prohibited behavior includes unauthorized access, data scraping, and posting harmful content.",
+    },
   ];
 
   // Simulate loading
@@ -34,7 +44,7 @@ const Terms = () => {
     <div className="">
       <NavLink
         to={"/"}
-        className="flex gap-2 items-center hover:bg-neutral-800 px-2 py-1 rounded-md w-fit m-2 md:m-10 transition transform ease-in-out duration-200 mt-4 md:mt-20">
+        className="flex gap-2 items-center hover:bg-neutral-800 px-2 py-1 rounded-md w-fit m-2 md:m-10 transition transform ease-in-out duration-200 mt-4 md:mt-20 sticky top-3 ">
         <ArrowLeft />
         <h1>Back</h1>
       </NavLink>
