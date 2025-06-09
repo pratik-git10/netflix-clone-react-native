@@ -6,7 +6,7 @@ import {
 } from "@clerk/clerk-react";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const navLinks = [
@@ -29,9 +29,9 @@ const Header = () => {
     <div className="border border-neutral-300 border-t-0 shadow-sm max-w-5xl mx-4 xl:mx-auto shadow-white sticky top-0 backdrop-blur-xs rounded-md flex-1 flex-nowrap mt-3">
       <div className="flex px-6 py-3 mb-2 justify-between items-center mx-2">
         <div>
-          <Link className="font-bold text-2xl text-rose-3 00" to={"/"}>
+          <NavLink className="font-bold text-2xl text-rose-3 00" to={"/"}>
             ChatApp
-          </Link>
+          </NavLink>
         </div>
         <div className="hidden md:flex gap-4 ">
           {navLinks.map((link, idx) => (
